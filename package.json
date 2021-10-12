@@ -1,0 +1,24 @@
+{
+  "name": "MusicNotes",
+  "version": "1.0.0",
+  "description": "\"Write Description here\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stephenjoel2k/MusicNotes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stephenjoel2k/MusicNotes/issues"
+  },
+  "homepage": "https://github.com/Stephenjoel2k/MusicNotes#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
