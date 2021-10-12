@@ -8,3 +8,4 @@
 2. Go the root directory and run `npm install` on the terminal (shell of your choice).
 3. Type `node server.js` on the terminal from the root directory.
 4. Open your browser and go to http://localhost:3000/
+5. Upload an image and you'll see it in /uploads/images in your project
