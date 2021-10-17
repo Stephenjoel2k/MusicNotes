@@ -49,10 +49,11 @@
             class="login100-form validate-form"
             action="/upload"
             method="post"
-            enctype="multipart/form-data"
+            enctype="application/json"
+            onsubmit="processInput()"
           >
             <span class="login100-form-title">
-              Upload MusicSheet
+              Upload Music Sheet
             </span>
 
             <input
@@ -106,6 +107,7 @@
       })
     </script>
     <!--===============================================================================================-->
-    <script src=".js/main.js"></script>
+    <script src="Models/base64Encoder.js"></script>
+    <!--===============================================================================================-->
   </body>
 </html>

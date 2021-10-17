@@ -7,7 +7,12 @@ const upload = multer({ dest: __dirname + '/uploads/images' })
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/Views'))
-
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+)
+app.use(express.json())
 // Host the image form here. Render an HTML from here
 app.get('/', (req, res) => {
   res.sendFile(path.resolve('index.html'))
@@ -17,7 +22,7 @@ app.get('/', (req, res) => {
 app.post('/upload', upload.single('photo'), (req, res) => {
   // Call a middleware function here on the {req.file} to use the base64 encoded image
   if (req.file) {
-    res.json(req.file)
+    res.json({requestBody: req.body})
   } else throw 'error'
 })
 
