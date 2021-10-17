@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 const path = require('path')
-const multer = require('multer')
-const upload = multer({ dest: __dirname + '/uploads/images' })
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.static(__dirname + '/Views'))
@@ -19,11 +17,10 @@ app.get('/', (req, res) => {
 })
 
 // If user uploads a file, then this is the function that gets called
-app.post('/upload', upload.single('photo'), (req, res) => {
+app.post('/upload', (req, res) => {
   // Call a middleware function here on the {req.file} to use the base64 encoded image
-  if (req.file) {
-    res.json({requestBody: req.body})
-  } else throw 'error'
+  res.send("HELLO WORLD")
+
 })
 
 // Redirects all incorrect endpoints to home
